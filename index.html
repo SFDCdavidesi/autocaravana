@@ -51,7 +51,6 @@
         }
         
         .hero-pattern {
-            /* Para GitHub: Si quieres cambiar el fondo, cambia la url de Unsplash por url('./imagenes/fondo-hero.jpg') */
             background-image: linear-gradient(rgba(12, 74, 110, 0.7), rgba(20, 83, 45, 0.7)), url('https://images.unsplash.com/photo-1549558549-415fe4c37b60?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
             background-size: cover;
             background-position: center;
@@ -66,7 +65,7 @@
         }
 
         .accordion-content.active {
-            max-height: 1000px; /* Arbitrary large number to fit content */
+            max-height: 1000px;
             opacity: 1;
         }
 
@@ -78,20 +77,11 @@
             transform: rotate(180deg);
         }
 
-        /* Custom scrollbar for a cleaner look */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1; 
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #cbd5e1; 
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8; 
-        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
     </style>
 </head>
 <body class="min-h-screen flex flex-col font-sans">
@@ -128,7 +118,7 @@
                 </div>
                 <div>
                     <h3 class="font-bold text-gray-900">La Ruta</h3>
-                    <p class="text-sm text-gray-500 mt-1">Del centro a Cabárceno, para luego cruzar al occidente asturiano, la zona más <em>camper-friendly</em>.</p>
+                    <p class="text-sm text-gray-500 mt-1">De Cantabria occidental al occidente asturiano, la zona más <em>camper-friendly</em> de la cornisa.</p>
                 </div>
             </div>
             
@@ -158,7 +148,7 @@
             <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Mapa de la ruta" class="w-full h-64 md:h-80 object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.src='https://placehold.co/1200x400/e2e8f0/475569?text=Mapa+de+Ruta'">
             <div class="absolute inset-0 bg-slate-900/50 flex flex-col items-center justify-center">
                 <h3 class="text-white text-2xl md:text-3xl font-bold mb-4 drop-shadow-lg">Ruta Interactiva en Mapa</h3>
-                <a href="https://www.google.com/maps/dir/Arenas+de+San+Pedro/Parque+de+la+Naturaleza+de+Cab%C3%A1rceno/B%C3%A1rzana,+Quir%C3%B3s/Playa+de+Arnao/Navia/Tapia+de+Casariego/Faro+de+Isla+Pancha/Arenas+de+San+Pedro" target="_blank" rel="noopener noreferrer" class="bg-brand-500 hover:bg-brand-600 text-white px-6 py-3 rounded-full font-medium transition-colors shadow-lg flex items-center gap-2">
+                <a href="https://www.google.com/maps/dir/Arenas+de+San+Pedro/Parque+de+la+Naturaleza+de+Cab%C3%A1rceno/Somo/Santander/Santillana+del+Mar/Comillas/San+Vicente+de+la+Barquera/Unquera/B%C3%A1rzana,+Quir%C3%B3s/Playa+de+Arnao/Navia/Tapia+de+Casariego/Faro+de+Isla+Pancha/Arenas+de+San+Pedro" target="_blank" rel="noopener noreferrer" class="bg-brand-500 hover:bg-brand-600 text-white px-6 py-3 rounded-full font-medium transition-colors shadow-lg flex items-center gap-2">
                     <i class="fa-solid fa-map-location-dot"></i> Abrir ruta en Google Maps
                 </a>
             </div>
@@ -201,141 +191,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <img src="https://images.unsplash.com/photo-1588602055627-2287f3bcfca2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Oso en Cabárceno" class="rounded-xl shadow-md w-full object-cover h-48 md:h-auto" onerror="this.src='https://placehold.co/800x400/e2e8f0/475569?text=Oso+Cabárceno'">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Day 2 -->
-            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-                <button class="accordion-button w-full text-left px-6 py-5 flex items-center justify-between focus:outline-none bg-white hover:bg-gray-50 transition-colors" onclick="toggleAccordion('day2')">
-                    <div class="flex items-center space-x-4">
-                        <div class="bg-brand-500 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg shadow-sm">
-                            D2
-                        </div>
-                        <div>
-                            <p class="text-sm text-brand-600 font-semibold uppercase tracking-wider">20 de Julio</p>
-                            <h3 class="text-xl font-bold text-gray-800">Cantabria <i class="fa-solid fa-arrow-right text-sm text-gray-400 mx-2"></i> TBPbM</h3>
-                        </div>
-                    </div>
-                    <i class="fa-solid fa-chevron-down text-gray-400 accordion-icon"></i>
-                </button>
-                <div id="day2" class="accordion-content bg-gray-50 px-6 pb-6">
-                    <div class="pt-4 border-t border-gray-200 mt-2 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
-                        <div>
-                            <p class="text-gray-600 mb-4">Día pendiente de definir en ruta por Cantabria.<br><br><span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold border border-yellow-200"><i class="fa-solid fa-hourglass-half mr-1"></i> TBPbM / To Be Provided by Mariano</span></p>
-                            <ul class="space-y-3 mb-4">
-                                <li class="flex items-start">
-                                    <i class="fa-solid fa-clipboard-question text-brand-500 mt-1 mr-3"></i>
-                                    <span class="text-gray-700"><strong>Plan:</strong> A la espera de las recomendaciones de Mariano para definir las actividades y lugares de pernocta de este segundo día de ruta.</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="rounded-xl shadow-inner w-full h-48 md:h-auto border-2 border-dashed border-gray-300 bg-gray-50 flex flex-col items-center justify-center text-gray-400">
-                            <i class="fa-solid fa-map-location-dot text-4xl mb-2"></i>
-                            <span class="block text-sm font-medium mt-2">Espacio reservado (Mariano)</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Day 3 -->
-            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-                <button class="accordion-button w-full text-left px-6 py-5 flex items-center justify-between focus:outline-none bg-white hover:bg-gray-50 transition-colors" onclick="toggleAccordion('day3')">
-                    <div class="flex items-center space-x-4">
-                        <div class="bg-brand-500 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg shadow-sm">
-                            D3
-                        </div>
-                        <div>
-                            <p class="text-sm text-brand-600 font-semibold uppercase tracking-wider">21 de Julio</p>
-                            <h3 class="text-xl font-bold text-gray-800">Cantabria <i class="fa-solid fa-arrow-right text-sm text-gray-400 mx-2"></i> TBPbM</h3>
-                        </div>
-                    </div>
-                    <i class="fa-solid fa-chevron-down text-gray-400 accordion-icon"></i>
-                </button>
-                <div id="day3" class="accordion-content bg-gray-50 px-6 pb-6">
-                    <div class="pt-4 border-t border-gray-200 mt-2 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
-                        <div>
-                            <p class="text-gray-600 mb-4">Día pendiente de definir, cerrando la etapa cántabra antes de entrar en Asturias.<br><br><span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold border border-yellow-200"><i class="fa-solid fa-hourglass-half mr-1"></i> TBPbM / To Be Provided by Mariano</span></p>
-                            <ul class="space-y-3 mb-4">
-                                <li class="flex items-start">
-                                    <i class="fa-solid fa-clipboard-question text-brand-500 mt-1 mr-3"></i>
-                                    <span class="text-gray-700"><strong>Plan:</strong> A la espera de las recomendaciones de Mariano para definir este tercer día en tierras cántabras.</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="rounded-xl shadow-inner w-full h-48 md:h-auto border-2 border-dashed border-gray-300 bg-gray-50 flex flex-col items-center justify-center text-gray-400">
-                            <i class="fa-solid fa-map-location-dot text-4xl mb-2"></i>
-                            <span class="block text-sm font-medium mt-2">Espacio reservado (Mariano)</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Day 4 -->
-            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-                <button class="accordion-button w-full text-left px-6 py-5 flex items-center justify-between focus:outline-none bg-white hover:bg-gray-50 transition-colors" onclick="toggleAccordion('day4')">
-                    <div class="flex items-center space-x-4">
-                        <div class="bg-ocean-500 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg shadow-sm">
-                            D4
-                        </div>
-                        <div>
-                            <p class="text-sm text-ocean-600 font-semibold uppercase tracking-wider">22 de Julio</p>
-                            <h3 class="text-xl font-bold text-gray-800">Asturias <i class="fa-solid fa-arrow-right text-sm text-gray-400 mx-2"></i> Bárzana (Quirós)</h3>
-                        </div>
-                    </div>
-                    <i class="fa-solid fa-chevron-down text-gray-400 accordion-icon"></i>
-                </button>
-                <div id="day4" class="accordion-content bg-gray-50 px-6 pb-6">
-                    <div class="pt-4 border-t border-gray-200 mt-2 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
-                        <div>
-                            <p class="text-gray-600 mb-4">Entráis en Asturias y vais directos a los puertos de montaña. Tal y como os recomendaba David, esta zona interior regala unas vistas espectaculares y rutas muy agradables.</p>
-                            <ul class="space-y-3 mb-4">
-                                <li class="flex items-start">
-                                    <i class="fa-solid fa-mountain text-ocean-500 mt-1 mr-3"></i>
-                                    <span class="text-gray-700"><strong>Actividad (Senda del Oso):</strong> Perfecta para estirar las piernas y pasear tranquilos con la familia y la mascota por parajes naturales.</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fa-solid fa-moon text-indigo-500 mt-1 mr-3"></i>
-                                    <span class="text-gray-700"><strong>Pernocta en Bárzana:</strong> Tu amigo mencionaba un buen parking para autocaravanas cerca de la senda. Las vistas a las cumbres valen la pena.</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <img src="https://images.unsplash.com/photo-1549558549-415fe4c37b60?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Valles del Oso y Quirós" class="rounded-xl shadow-md w-full object-cover h-48 md:h-auto" onerror="this.src='https://placehold.co/800x400/e2e8f0/475569?text=Montañas+Asturianas'">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Day 5 -->
-            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-                <button class="accordion-button w-full text-left px-6 py-5 flex items-center justify-between focus:outline-none bg-white hover:bg-gray-50 transition-colors" onclick="toggleAccordion('day5')">
-                    <div class="flex items-center space-x-4">
-                        <div class="bg-ocean-500 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg shadow-sm">
-                            D5
-                        </div>
-                        <div>
-                            <p class="text-sm text-ocean-600 font-semibold uppercase tracking-wider">23 de Julio</p>
-                            <h3 class="text-xl font-bold text-gray-800">Quirós <i class="fa-solid fa-arrow-right text-sm text-gray-400 mx-2"></i> Playa de Arnao</h3>
-                        </div>
-                    </div>
-                    <i class="fa-solid fa-chevron-down text-gray-400 accordion-icon"></i>
-                </button>
-                <div id="day5" class="accordion-content bg-gray-50 px-6 pb-6">
-                    <div class="pt-4 border-t border-gray-200 mt-2 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
-                        <div>
-                            <p class="text-gray-600 mb-4">Bajando desde la montaña hacia el mar Cantábrico. Nos asomamos a la costa de Castrillón para disfrutar de la arena.</p>
-                            <ul class="space-y-3 mb-4">
-                                <li class="flex items-start">
-                                    <i class="fa-solid fa-umbrella-beach text-ocean-500 mt-1 mr-3"></i>
-                                    <span class="text-gray-700"><strong>Playa de Arnao:</strong> Un entorno fantástico. Podéis visitar la Mina de Arnao, un trozo de patrimonio industrial muy curioso junto al mar.</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fa-solid fa-moon text-indigo-500 mt-1 mr-3"></i>
-                                    <span class="text-gray-700"><strong>Pernocta en Arnao:</strong> Como apuntaba vuestro contacto, "La de Arnao, en la playa también se puede y también está chula". Un lujo asomarse aquí.</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <img src="https://images.unsplash.com/photo-1627393437142-b06cb4b0a316?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Costa Cantábrica en Arnao" class="rounded-xl shadow-md w-full object-cover h-48 md:h-auto" onerror="this.src='https://placehold.co/800x400/e2e8f0/475569?text=Playa+de+Arnao'">
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Playa_de_Arnao_(Castrillón),_Asturias_(España).jpg?width=800" alt="Costa Cantábrica en Arnao" class="rounded-xl shadow-md w-full object-cover h-48 md:h-auto" onerror="this.src='https://placehold.co/800x400/e2e8f0/475569?text=Playa+de+Arnao'">
                     </div>
                 </div>
             </div>
@@ -369,7 +225,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <img src="https://images.unsplash.com/photo-1589139268673-c1505c13b3af?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ría de Navia" class="rounded-xl shadow-md w-full object-cover h-48 md:h-auto" onerror="this.src='https://placehold.co/800x400/e2e8f0/475569?text=Ría+de+Navia'">
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/PA120194_-_Desembocadura_de_la_ría_de_Navia.jpg?width=800" alt="Ría de Navia" class="rounded-xl shadow-md w-full object-cover h-48 md:h-auto" onerror="this.src='https://placehold.co/800x400/e2e8f0/475569?text=Ría+de+Navia'">
                     </div>
                 </div>
             </div>
@@ -403,7 +259,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <img src="https://images.unsplash.com/photo-1600869614275-9e6be22bd189?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Puerto de Tapia de Casariego y Ribadeo" class="rounded-xl shadow-md w-full object-cover h-48 md:h-auto" onerror="this.src='https://placehold.co/800x400/e2e8f0/475569?text=Tapia+y+Ribadeo'">
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/A_ría_de_Ribadeo_e_o_mar_Cantábrico.jpg?width=800" alt="Puerto de Tapia de Casariego y Ribadeo" class="rounded-xl shadow-md w-full object-cover h-48 md:h-auto" onerror="this.src='https://placehold.co/800x400/e2e8f0/475569?text=Tapia+y+Ribadeo'">
                     </div>
                 </div>
             </div>
@@ -428,7 +284,7 @@
             // Check if already active
             const isActive = content.classList.contains('active');
             
-            // Close all items (optional: if you only want one open at a time)
+            // Close all items
             document.querySelectorAll('.accordion-content').forEach(item => {
                 item.classList.remove('active');
                 item.style.padding = "0 1.5rem"; // Reset padding
